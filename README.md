@@ -1,4 +1,4 @@
-# middle-chinese-
+# middle-chinese中古音韻標記器
 「一個用於在網頁上查詢漢字中古音韻地位的瀏覽器擴展程序。」
 
 介紹
