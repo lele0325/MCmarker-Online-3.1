@@ -8,7 +8,8 @@
 
 數據說明：
 
-數據基於github上untunt/QYS4MCPDict项目里的廣韻.tsv，如有引用需要，請核對原表（请参：https://github.com/untunt/QYS4MCPDict）。插件製作出於興趣和學習需要，請勿商用。
+數據基於github上untunt/QYS4MCPDict项目里的廣韻.tsv，如有引用需要，請核對原表，请参：https://github.com/untunt/QYS4MCPDict
+插件製作出於興趣和學習需要，請勿商用。
 
 版本更新：3.1 (2025/10/23)
 
