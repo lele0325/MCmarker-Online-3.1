@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "漢字中古音標記器",
+  "version": "3.1", // 版本號更新
+  "description": "為網頁上的漢字添加中古音韻地位資訊標記（滑鼠懸浮顯示）。",
+  "permissions": [
+    "activeTab",
+    "storage" // 🚨 新增：用於儲存用戶偏好
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "中古音標記工具"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["simplifiedToTraditionalMap.js", "content-script.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["middle-chinese-data.json"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

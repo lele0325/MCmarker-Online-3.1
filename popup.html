@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        /* 全局美化 */
+        body {
+            width: 300px; /* 增加寬度以容納更多內容 */
+            padding: 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #f4f7f9; /* 淺灰色背景 */
+            color: #333;
+        }
+
+        /* 標題區 */
+        .header {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #D1D9E6; /* 柔和的分隔線 */
+        }
+        h3 {
+            margin: 0;
+            color: #3f51b5; /* 主色調：深藍紫 */
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        /* 主控制按鈕區 */
+        .main-controls {
+            display: flex;
+            justify-content: space-between; /* 按鈕間隔開 */
+            margin-bottom: 15px;
+        }
+        button {
+            flex-grow: 1; /* 讓按鈕佔滿空間 */
+            padding: 10px 5px;
+            margin: 0 5px;
+            font-size: 13px;
+            cursor: pointer;
+            border: none;
+            border-radius: 6px; /* 圓角 */
+            background-color: #5C6BC0; /* 藍色 */
+            color: white;
+            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        button:hover {
+            background-color: #43a047; /* 綠色，表示功能開啟/啟用 */
+            transform: translateY(-1px);
+        }
+        button:active {
+            transform: translateY(0);
+            box-shadow: none;
+        }
+        #refreshPage {
+            background-color: #607d8b; /* 灰色調，次要操作 */
+        }
+        #refreshPage:hover {
+            background-color: #455a64;
+        }
+
+        /* 狀態文字 */
+        .status {
+            margin-top: 5px;
+            margin-bottom: 15px;
+            font-size: 12px;
+            color: #666;
+            min-height: 15px; /* 避免內容變化導致佈局跳動 */
+        }
+
+        /* 設置區塊 */
+        .field-settings {
+            padding: 15px;
+            border-top: 1px dashed #D1D9E6;
+            background-color: #ffffff; /* 白色背景，突出內容 */
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+        .field-settings h4 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #3f51b5;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: left;
+            padding-bottom: 5px;
+        }
+
+        /* 勾選框佈局 */
+        #fieldCheckboxes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 5%; /* 增加間距 */
+            font-size: 12px;
+            text-align: left;
+        }
+        #fieldCheckboxes label {
+            display: flex;
+            align-items: center;
+            width: 47%; /* 確保兩列佈局 */
+            cursor: pointer;
+        }
+        #fieldCheckboxes input[type="checkbox"] {
+            margin-right: 6px;
+            accent-color: #3f51b5; /* 使用主色調美化勾選框 */
+        }
+        
+        /* 儲存狀態 */
+        #saveStatus {
+            margin-top: 15px;
+            color: #4CAF50; /* 綠色，表示成功 */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h3>漢字中古音標記器</h3>
+    </div>
+    
+    <div class="main-controls">
+        <button id="togglePinyin">開/關標記</button>
+        <button id="refreshPage">重新載入頁面</button>
+    </div>
+    <div id="status" class="status">等待操作...</div>
+    
+    <div class="field-settings">
+        <h4>提示框顯示內容選擇</h4>
+        <div id="fieldCheckboxes">
+            </div>
+        <div class="status" id="saveStatus"></div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
