@@ -1,4 +1,4 @@
-# MCmarker-Online-3.1 漢字中古音韻標記器，
+# MCmarker-Online-3.1 漢字中古音韻標記器
 
 介紹
 
